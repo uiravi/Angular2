@@ -1,0 +1,20 @@
+{
+"headerMenu": [
+    {
+        "name": "Dashboard",
+        "path": "/Dashboard"
+    },
+    {
+        "name": "Dropdow Component",
+        "path": "/DropdownComponent"
+    },
+    {
+        "name": "Dropdow ng2-select2",
+        "path": "/CustomDropdownComponent"
+    },
+    {
+        "name": "Autocomplete Component",
+        "path": "/Autocomplete"
+    }]
+
+}

@@ -1,0 +1,19 @@
+<header class="header">
+  <div class="container fo">
+    <section class="header-left fl">
+        <h1 id="logo" class="lh0"><a href="#" routerLink="/dashboard">[ Angular Components ]</a></h1>
+    </section>
+    <div class="header-right fr mt15px mb15px">
+          <ul class="fo ac-fl ac-pr">
+            <li class="login-acr-ctnr ffssp fs13px"><a href="#" class="ttu" routerLink="/login">MEMBER LOGIN</a></li>
+            <li class="pr">
+                <a href="javascript:void(0);" class="green" (click)="toggleMenu()"><span class="fa fa-bars fs28px lh25px"></span></a>
+                <span *ngIf="dpContainer" class="fa fa-caret-up green fs20px dp-caret-up pa"></span>    
+                <ul *ngIf="dpContainer" class="dropdown-menu custom-scrollbar pa">
+                    <li *ngFor="let list of headerMenuList" routerLink="{{list.path}}" routerLinkActive="active" (click)="headerMenu()">{{list.name}}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+  </div>
+</header>
