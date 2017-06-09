@@ -724,8 +724,8 @@ img[id$='imgPixel'], .fake-element{opacity:0;position:absolute;width:0;height:0}
 	-moz-box-shadow: 0 0 5px rgba(193, 193, 193, 0.5);
 			box-shadow: 0 0 5px rgba(193, 193, 193, 0.5)}
 .select2-container .select2-container--classic .select2-results>.select2-results__options, .select2-container--default .select2-results>.select2-results__options{max-height:165px !important}
-.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option[aria-selected=true]{background:#f6f8fa !important;color:#333 !important;}
-
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option[aria-selected=true]{background:#f6f8fa !important;color:#333 !important}
+.select2-results__option{padding:6px 13px !important}
 
 
 /* End Custom Dropdown css */
