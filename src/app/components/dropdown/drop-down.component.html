@@ -1,11 +1,14 @@
 <h1 class="tac mt30px mb30px fwb fs30px">Dropdown Component</h1>
 
+<div>Selected value : {{seletedValue}}</div>
+<div>Data value : {{seletedValue}}</div>
+
 <div class="dropdown-container ffssp fs13px m0a pr">
     <input type="hidden" value="{{seletedValue}}" />
     <div class="selected-text" (click)="showList()">{{seletedValue}} <span class="fa fa-caret-down fr pa"></span></div>
     <span *ngIf="lists" class="fa fa-caret-up pa"></span>
-    <ul *ngIf="lists" #test class="drop-down-list custom-scrollbar pa" (window:keydown)="scroll($event)">
-        <li *ngFor="let list of dropdown_list" (click)="updateData($event)" data-value="{{list.dataValue}}">{{list.text}}</li>
+    <ul *ngIf="lists" class="drop-down-list custom-scrollbar pa" (window:keydown)="scroll($event)">
+        <li *ngFor="let list of dropdown_list; let idx = index" (click)="updateData($event)" data-value="{{list.dataValue}}" [class.selected]="selectedClass">{{list.text}}</li>
     </ul>
 </div>
 

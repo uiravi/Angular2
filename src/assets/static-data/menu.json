@@ -5,6 +5,10 @@
         "path": "/Dashboard"
     },
     {
+        "name": "Autocomplete Component",
+        "path": "/Autocomplete"
+    },
+    {
         "name": "Dropdow Component",
         "path": "/DropdownComponent"
     },
@@ -13,8 +17,8 @@
         "path": "/CustomDropdownComponent"
     },
     {
-        "name": "Autocomplete Component",
-        "path": "/Autocomplete"
+        "name": "Autocomplete Component ng2-completer",
+        "path": "/AutocompleteNg2Completer"
     }]
 
 }

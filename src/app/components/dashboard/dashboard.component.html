@@ -1,1 +1,4 @@
-<h1 class="tac fs30px fwb">Welcome to the Dashboard</h1>
+<h1 class="tac fs30px fwb mt30px">Welcome to the Dashboard</h1>
+<ul class="dashboard-thumb w100 ac-fl fo mt30px">
+    <li *ngFor="let list of dashboardMenus" routerLink="{{list.path}}" routerLinkActive="active">{{list.name}}</li>
+</ul>

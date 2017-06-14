@@ -4,7 +4,7 @@
 .selected-text .fa-caret-down{right:10px; top:0;}
 .drop-down-list{width: 290px;max-height:250px;box-shadow: 0 0 5px rgba(193, 193, 193, 0.5);border: 1px solid #b9b9b9;background-color: #ffffff;left:0; top: 47px;}
 .drop-down-list li{cursor:pointer;padding:10px;line-height:normal;}
-.drop-down-list li:hover{background:#f6f8fa;color:#333;}
+.drop-down-list li:hover, .drop-down-list li.selected{background:#f6f8fa;color:#333;}
 
 
     

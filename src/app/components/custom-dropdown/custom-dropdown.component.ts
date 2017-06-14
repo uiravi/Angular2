@@ -11,6 +11,7 @@ export class CustomDropdownComponent implements OnInit{
 
     public exampleData: Array<Select2OptionData>;
     public options: Select2Options;
+    public selectedVal :string[];
 
 
     onChanged(e){
@@ -18,12 +19,13 @@ export class CustomDropdownComponent implements OnInit{
         console.log(e.value);
     }
 
-
-
     ngOnInit() {
         this.options = {
             minimumResultsForSearch: -1
         }
+
+
+        this.selectedVal = ['6'];
 
         this.exampleData = [
             {"id": "-1", "text": "Select Your Career Field"},

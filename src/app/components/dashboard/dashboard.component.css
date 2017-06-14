@@ -1,0 +1,12 @@
+.dashboard-thumb > li{
+    cursor: pointer; height:150px; width:22.5%; border: 1px solid #e8ecf0; background: #fbfcfd; margin:10px; padding: 20px; text-align: center; font-size:15px; font-weight: bold;
+    -webkit-box-shadow: 0 0 5px rgba(88,88,95,.1);
+       -moz-box-shadow: 0 0 5px rgba(88,88,95,.1);
+            box-shadow: 0 0 5px rgba(88,88,95,.1)}
+
+.dashboard-thumb > li:hover{
+    border-color: #48a4ff;
+    color: #48a4ff;
+    -webkit-box-shadow: 0 0 30px rgba(88,88,95,.14);
+       -moz-box-shadow: 0 0 30px rgba(88,88,95,.14);
+            box-shadow: 0 0 30px rgba(88,88,95,.14);}

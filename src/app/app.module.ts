@@ -12,13 +12,15 @@ import { CommonService } from './common.service';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RoutingComponents } from './app.routing.module';
+import { FilterPipe } from './components/autocomplete/search.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoutingComponents,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

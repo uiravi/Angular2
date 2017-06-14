@@ -1,7 +1,12 @@
 <h1 class="tac mt30px fwb fs30px">Autocomplete Component</h1>
-<div class="autocomplete-search-dropdown m0a mt30px pr">
-    <span class="fa fa-search fs14px pa"></span>
-    <span *ngIf="showClear" class="fa fa-close fs14px pa" (click)="clearSearch()"></span>
-    <ng2-completer [(ngModel)]="searchStr" [datasource]="dataService" [fillHighlighted]="false" [minSearchLength]="0" inputClass="job-search-input" matchClass="heightlight" (keyup)="onKeyup($event)"></ng2-completer>
-</div>
 
+<div class="autocomplete-searc-ctnr m0a mt30px pr">
+    <span class="fa fa-search fs14px pa"></span>
+    <span *ngIf="clearBtn" class="fa fa-close fs14px pa" (click)="clearSearch()"></span>
+    <input type="text" name="search" [(ngModel)]="searchValue" placeholder="Search" class="job-search-input" (keyup)="onKeyup($event)" />
+    <div *ngIf="showSearchResult" class="search-list-ctnr pa">
+        <ul>
+            <li *ngFor="let list of searchData | filter:searchValue" (click)="selectResult($event)">{{list.name}}</li>
+        </ul>
+    </div>
+</div>

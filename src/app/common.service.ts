@@ -30,6 +30,12 @@ export class CommonService{
                    .catch(this.errorHandler);
     }
 
+    getCountriesList(){
+        return this.http.get(this._url+"countries-list.json")
+                   .map((response: Response) => response.json())
+                   .catch(this.errorHandler);
+    }
+
     errorHandler(error: Response){
         console.error(error);
         return Observable.throw(error || "Server Error");

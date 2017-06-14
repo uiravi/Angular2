@@ -1,37 +1,45 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from '../../common.service';
-import { CompleterService, CompleterData } from 'ng2-completer';
+import { FilterPipe } from'./search.pipe';
 
 @Component({
-    selector: 'autocomplete',
     templateUrl: './autocomplete.component.html',
     styleUrls: ['./autocomplete.component.css']
 })
 
-export class AutocompleteComponent{
-    showClear: boolean = false;
+export class AutocompleteComponent implements OnInit{
+    constructor(private searchService : CommonService){}
 
-    private searchStr: string;
-    private dataService: CompleterData;
-    private searchData = []
-    
-    clearSearch(){
-        this.searchStr = "";
-        this.showClear = false;
-    }
+    searchData = [];
+    clearBtn: Boolean;
+    showSearchResult: Boolean;
+    searchValue: string;
 
     onKeyup(e){
-        this.searchStr == "" ? this.showClear = false : this.showClear = true;
+        if(this.searchValue == ""){
+            this.clearBtn = false;
+            this.showSearchResult = false;
+        }else{
+            this.clearBtn = true;
+            this.showSearchResult = true;
+        }
+    }
+
+    selectResult(e){
+        console.log(e.target.innerText);
+        this.searchValue = e.target.innerText;
+    }
+
+    clearSearch(){
+        this.searchValue = "";
+        this.showSearchResult = false;
+        this.clearBtn = false;
     }
 
     ngOnInit(){
-        this.searchService.getSearchData()
-            .subscribe(data => {
-                this.searchData = data.searchData;
-                console.log(this.searchData);
-                this.dataService = this.completerService.local(this.searchData);
-            });
+        this.searchService.getCountriesList()
+            .subscribe(data => this.searchData = data);
+            //.subscribe(data => console.log(data));
     }
 
-    constructor(private searchService: CommonService, private completerService: CompleterService){}
 }

@@ -13,12 +13,15 @@ export class DropdownComponent{
     dropdown_list = [];
     seletedValue = "Select Your Career Field"
     lists = false;
+    selectedClass: boolean;
+    optionValue;
     
     showList(){ 
         this.lists == true ? this.lists = false : this.lists = true;
     }
 
     updateData(e){
+        console.log(e);
         console.log(e.target.attributes[1].nodeValue);
         this.seletedValue = e.target.innerText;
         this.lists = false;

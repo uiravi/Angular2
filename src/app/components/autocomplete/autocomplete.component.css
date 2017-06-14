@@ -1,0 +1,8 @@
+.autocomplete-searc-ctnr{width:300px;}
+.autocomplete-searc-ctnr .fa.fa-search{top:13px;left:15px;}
+.autocomplete-searc-ctnr .fa.fa-close{color:#c9d0d6;cursor:pointer;top:13px;right:15px;}
+.autocomplete-searc-ctnr .fa.fa-close:hover{color:#666;}
+.autocomplete-searc-ctnr .job-search-input{background-color:#fff;color:#333;border:1px solid #ccc;font-size:15px;padding:0 35px;height:45px;width:100%;}
+.autocomplete-searc-ctnr .search-list-ctnr{background-color:#fff;border:1px solid #ccc;max-height:200px;width:100%;top:46px;overflow-y:auto}
+.autocomplete-searc-ctnr .search-list-ctnr > ul >li{padding:10px;}
+.autocomplete-searc-ctnr .search-list-ctnr > ul >li:hover{background:#eee;cursor:pointer;}
